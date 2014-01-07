@@ -2,7 +2,7 @@
 
 This is the first application of Edpath 
 
-(*edpathapp*)(http://onemonthrails.com)
+[*Edpath*](http://onemonthrails.com)
 
-by Leandro Pisaroni (http://leandropisaroni.com)
+by [Leandro Pisaroni]  (http://leandropisaroni.com)
 
