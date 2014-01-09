@@ -15,7 +15,7 @@ group :production do
 	gem "rails_12factor"
 end
 
-group :development do, :test do
+group :development, :test do
 gem "rails_layout"
 gem 'sqlite3'
   # bundle exec rake doc:rails generates the API under doc/api.
