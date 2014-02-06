@@ -77,9 +77,12 @@ Edpath::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+<<<<<<< HEAD
 
   #required or heroku 
   # note to set this your actual post
   config.action_mailer.default_url_options = { :host => 'edpath.herokuapp.com' }
 
+=======
+>>>>>>> e048786709a418050bb61413252438dbf2f57258
 end

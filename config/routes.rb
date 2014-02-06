@@ -1,5 +1,8 @@
 Edpath::Application.routes.draw do
+<<<<<<< HEAD
   devise_for :users 
+=======
+>>>>>>> e048786709a418050bb61413252438dbf2f57258
   root "pages#home"
   get "about" => "pages#about"
   get "contact" => "pages#contact"
