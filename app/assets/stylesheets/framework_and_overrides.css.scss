@@ -1,0 +1,58 @@
+// import the CSS framework
+$body-bg:  #ecf0f1;
+$font-family-sans-serif:'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height: 45px;
+$navbar-default-bg: white;
+$navbar-default-link-color: black;
+$brand-primary: #2bc084;
+$jumbotron-bg: white;
+
+@import "bootstrap";
+
+.center {
+     text-align: center;
+}
+
+// make all images responsive by default
+img {
+  @extend .img-responsive;
+  margin: 0 auto;
+  }
+// override for the 'Home' navigation link
+.navbar-brand {
+  font-size: Helvetica ;
+  font-weight: bold ;
+  }
+
+// THESE ARE EXAMPLES YOU CAN MODIFY
+// create your own classes
+// to make views framework-neutral
+.column {
+  @extend .col-md-6;
+  @extend .text-center;
+  }
+.form {
+  @extend .col-md-6;
+  }
+.form-centered {
+  @extend .col-md-6;
+  @extend .text-center;
+  }
+.submit {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
+  }
+// apply styles to HTML elements
+// to make views framework-neutral
+main {
+  @extend .container;
+  background-color: white;
+  padding-bottom: 250px;
+  width: 100%;
+  margin-top: 46px; // accommodate the navbar
+  }
+section {
+  @extend .row;
+  margin-top: 100px;
+  }

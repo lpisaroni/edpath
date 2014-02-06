@@ -1,0 +1,18 @@
+<div class="jumbotron center">
+  	<div class="container">
+		<h1> Edpath </h1>
+		<h2> Personalized Educational Path </h2>
+			
+			<% if user_signed_in? %>
+          # do something
+     		<% else %>
+			<p> 
+			<%= link_to "Sign up", new_user_registration_path , class: "btn btn-primary btn-lg" %> 
+			<%= link_to "Sign in", new_user_session_path , class: "btn btn-primary btn-lg" %> 
+		 	<%= link_to "Learn more", about_path ,  class: "btn btn-primary btn-lg" %> 
+			 </p>
+
+			 <% end %>
+	</div>
+</div>
+
