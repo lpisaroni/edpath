@@ -5,7 +5,12 @@
 
 			
 			<% if user_signed_in? %>
+          		<span> <%= current_user.email %> </span> 
+
           # do something
+
+
+
      		<% else %>
 			<p> 
 			<%= link_to "Sign up", new_user_registration_path , class: "btn btn-primary btn-lg" %> 
