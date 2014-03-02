@@ -1,32 +1,39 @@
-<h1>Listing pins</h1>
+<div class="jumbotron center">
+  <h1>Listing pins</h1>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>User</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="row"> 
 
-  <tbody>
-    <% @pins.each do |pin| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= pin.description %></td>
-        <td><%= pin.user.email if pin.user  %></td>
-        <td><%= link_to 'Show', pin %></td>
-        <% if pin.user == current_user %>
-          <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-          <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+        <th>Image</th>
+        <th>Description</th>
+        <th>User</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-<% if user_signed_in? %>
-  <%= link_to 'New Pin', new_pin_path %>
-<% end %>
+    <tbody>
+      <% @pins.each do |pin| %>
+        <tr>
+          <td><%= image_tag pin.image.url %></td>
+          <td><%= pin.description %></td>
+          <td><%= pin.user.email if pin.user  %></td>
+          <td><%= link_to 'Show', pin, class: "btn btn-primary" %> </td>
+          <% if pin.user == current_user %>
+            <td><%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-primary" %></td>
+            <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+  <% if user_signed_in? %>
+    <%= link_to 'New Pin', new_pin_path %>
+  <% end %>
+</div>
